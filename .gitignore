@@ -1,0 +1,7 @@
+attendance/**/*.csv
+!attendance/module-01/class-1.csv
+!attendance/module-01/class-1-extra-credit.csv
+venv
+student_names.json
+__pycache__
+.vscode
