@@ -10,6 +10,10 @@ Note that this is set up for my course, which meets twice a week and has extra c
 
 To run this script, you need Python 3.10+ installed. Then, create a virtual environment with `python -m venv venv` and install the dependencies with `pip install -r requirements.txt`. The script itself does not require any third party dependencies, however testing is achieved with the third party `pytest` module.
 
+### Student Names
+
+Add the students names as an array of strings in a JSON file called `student_names.json`.
+
 ### PollEverywhere Results
 
 After conducting an attendance poll with PollEverywhere, save it in the `attendance` folder in its respective module folder. The module name should be of the pattern `module-XX` where the module number is two digits (eg. 01 and 10). The CSV file should follow the naming format `class-X.csv` where the class number is 1 or 2. There is no need to modify the contents of the CSV from PollEverywhere.
