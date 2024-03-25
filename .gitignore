@@ -5,3 +5,4 @@ venv
 student_names.json
 __pycache__
 .vscode
+*Zone.Identifier

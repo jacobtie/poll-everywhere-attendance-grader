@@ -55,12 +55,12 @@ def get_present_student_names(module_num: str, class_num: str, is_extra_credit=F
     """Gets the students present in class given the module and class number"""
     poll_ev_file_lines = None
     file_name = f'class-{class_num}.csv' if not is_extra_credit else f'class-{class_num}-extra-credit.csv'
-    with open(path.join('attendance', f'module-{module_num}', file_name), 'r') as file:
+    with open(path.join('attendance', f'module-{module_num}', file_name), 'r', encoding='utf-8-sig') as file:
         poll_ev_file_lines = file.readlines()
     # Find the row starting with "Response,Via,Screen name" and remove all fluff before it so we just get the CSV
     header_row_index = -1
     for i, row in enumerate(poll_ev_file_lines):
-        if row.startswith('Response,Via,Screen name'):
+        if row.strip().startswith('Response,Via,Screen name'):
             header_row_index = i
             break
     if header_row_index == -1:
